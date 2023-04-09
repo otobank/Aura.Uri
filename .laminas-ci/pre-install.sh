@@ -4,7 +4,7 @@ WORKING_DIRECTORY=$2
 JOB=$3
 PHP_VERSION=$(echo "${JOB}" | jq -r .php)
 
-if [[ "${PHP_VERSION}" != "7.2" ]] && [[ "${PHP_VERSION}" != "7.3" ]]; then
+if [[ "${PHP_VERSION}" != "7.2" ]] ; then
     exit 0
 fi
 
